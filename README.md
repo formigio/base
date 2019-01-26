@@ -1,6 +1,6 @@
-# Formigio Personal
+# Formigio Base
 
-> An app to help individuals to get accomplish more using The Accomplishment System
+> An app to build applications for business
 
 ## Local Development
 
@@ -70,4 +70,4 @@ $ yarn test-e2e
 1. First, we add the data part to the `saveState` function, were we add specific state data to be persisted.
 1. Then we add a function in the App component, to load the data from a specific component, and we add that function to the `loadState` callback.
 
-> The dataset you want to persist needs a action object and reducer case that persists the data to the application state once it's fetched. See the `actions/trackers.js` and `reducers/trackers.js` for examples.
+> The dataset you want to persist needs a action object and reducer case that persists the data to the application state once it's fetched. See the `actions/user.js` and `reducers/user.js` for examples.
