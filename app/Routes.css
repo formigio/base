@@ -1,0 +1,11 @@
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+.copyright {
+  text-align: center;
+  margin: 1em;
+  padding: 1em;
+  margin-bottom: 40px;
+  font-size: 12px;
+}

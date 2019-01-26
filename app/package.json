@@ -1,0 +1,18 @@
+{
+  "name": "formigio-base",
+  "productName": "formigio-base",
+  "version": "0.0.0",
+  "description": "Formigio Base is a application base for building business applications",
+  "main": "./main.prod.js",
+  "author": {
+    "name": "Never Behind Group, LLC",
+    "email": "geoff@neverbehind.com",
+    "url": "https://github.com/drdouglasghd"
+  },
+  "scripts": {
+    "electron-rebuild": "node -r babel-register ../internals/scripts/ElectronRebuild.js",
+    "postinstall": "yarn electron-rebuild"
+  },
+  "license": "MIT",
+  "dependencies": {}
+}
