@@ -5,6 +5,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Typography from '@material-ui/core/Typography';
 import Toolbar from '@material-ui/core/Toolbar';
 import DeviceSync from '../../containers/Backup/Sync';
+import SimpleMenu from './Menu';
 
 const styles = theme => ({
   appBar: {
@@ -34,6 +35,7 @@ class BottomBar extends Component<Props> {
     return (
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar className={classes.toolBar}>
+          <SimpleMenu />
           <Typography variant="overline" className={classes.overline}>
             Formigio Base
           </Typography>

@@ -1,25 +1,32 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import styles from './Home.css';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
 import UserNotes from '../../containers/UserNotes';
 import Tour from '../../containers/Tour';
 import Clock from './Clock';
 
 const style = theme => ({
-  card: {
-    marginRight: '17px',
-    marginBottom: '1em'
-  },
-  badge: {
-    top: 0,
-    right: 0
+  root: {
+    ...theme.mixins.gutters(),
+    paddingTop: theme.spacing.unit * 2,
+    paddingBottom: theme.spacing.unit * 2,
+    marginTop: theme.spacing.unit * 2,
+    marginBottom: theme.spacing.unit * 2,
+    marginRight: 'auto',
+    marginLeft: 'auto'
   },
   welcome: {
     color: theme.palette.secondary.main
+  },
+  container: {
+    display: 'flex',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    width: '100%'
   }
 });
-
 type Props = {};
 
 class Home extends Component<Props> {
@@ -31,20 +38,22 @@ class Home extends Component<Props> {
     const { classes, user } = this.props;
 
     return (
-      <div className={styles.container}>
-        <div className={styles.containerCenter}>
-          <div className={styles.contentContainer}>
-            <div className={styles.contentContainerRight}>
-              <div className={styles.welcomeWrap}>
-                <div className={[styles.welcome, classes.welcome].join(' ')}>
-                  Welcome Back! {user.name}
-                </div>
-              </div>
-              <UserNotes />
-              <Clock />
+      <div className={classes.container}>
+        <Paper className={classes.root} elevation={1}>
+          <Typography variant="h5" component="h3">
+            <div className={[classes.welcome].join(' ')}>
+              Welcome Back! {user.name}
             </div>
-          </div>
-        </div>
+          </Typography>
+          <Typography component="p">
+            <Clock />
+          </Typography>
+        </Paper>
+        <Paper className={classes.root} elevation={1}>
+          <Typography component="p">
+            <UserNotes />
+          </Typography>
+        </Paper>
         <Tour
           id="home-v1.0"
           steps={[

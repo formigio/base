@@ -84,7 +84,7 @@ class Notes extends Component<Props> {
           multiline
           value={notes}
           margin="normal"
-          placeholder="Makes some notes"
+          placeholder="Enter some user notes"
           className={classes.textField}
           InputProps={{
             className: classes.input,

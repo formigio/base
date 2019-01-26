@@ -1,43 +1,6 @@
 * {
   box-sizing: border-box;
 }
-
-.contentContainer {
-  display: flex;
-}
-.notesTitle {
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 0.5px;
-  margin-top: 55px;
-}
-.popUpNotes {
-  margin-top: 17px;
-  margin-right: 14px;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 1.43;
-  letter-spacing: 0;
-}
-.welcome {
-  flex: 1 1 auto;
-}
-.welcomeWrap {
-  display: flex;
-  flex-direction: row;
-}
-.notes {
-  min-height: 50px;
-  margin-top: 17px;
-  padding: 16px;
-  background-color: #fffbdd;
-  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.13), 0 3px 4px 0 rgba(0, 0, 0, 0.13);
-}
-.notesLabel {
-  font-size: 11px;
-  font-weight: bold;
-  letter-spacing: 0.5px;
-}
 .watch {
   margin-top: 17px;
   margin-right: 14px;
@@ -45,7 +8,4 @@
   font-size: 53px;
   position: relative;
   text-align: center;
-}
-.textArea {
-  width: 32vw;
 }

@@ -539,12 +539,16 @@ class Settings extends Component<Props> {
               </ExpansionPanelDetails>
             </ExpansionPanel>
           </div>
-          <Dialog open={Boolean(imported.user.id)}>
+          <Dialog open={Boolean(imported.user && imported.user.id)}>
             <DialogTitle>Process Import</DialogTitle>
             <DialogContent>
               <List>
                 <ListItem>
-                  <ListItemText primary={`User found: ${imported.user.id}`} />
+                  <ListItemText
+                    primary={`User found: ${
+                      imported.user ? imported.user.id : ''
+                    }`}
+                  />
                 </ListItem>
               </List>
               <Typography>
